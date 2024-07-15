@@ -1,10 +1,12 @@
-
-interface ButtonProps {
+interface ButtonSharedStateProps {
     count: number,
     onClick: () => void;
   }
 
-export default function Button({onClick, count}: ButtonProps){
+export const ButtonSharedState = ({
+    onClick,
+    count,
+}: ButtonSharedStateProps) => {
     return (
         <button
         onClick={onClick}
@@ -12,4 +14,4 @@ export default function Button({onClick, count}: ButtonProps){
             I have been clicked {count} times
         </button>
     );
-}
+};
